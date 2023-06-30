@@ -1,5 +1,6 @@
 import { url } from 'inspector';
 
+
 /** @type {import('tailwindcss').Config} */
 export default {
   content: [
@@ -8,6 +9,9 @@ export default {
   ],
   theme: {
     extend: {
+      fontFamily:{
+        'sans': ['Rubik', ]
+      },
       backgroundImage: {
         'hero-desktop': url('src/assets/img/pattern-bg-desktop.png'),
         'hero-mobile': url('src/assets/img/pattern-bg-mobile.png')
