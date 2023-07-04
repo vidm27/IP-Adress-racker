@@ -61,6 +61,7 @@ onMounted(() => {
             placeholder="Search for any IP address or domain" v-model="ipAddress"
             class="rounded-md w-full p-3 outline-none text-gray-900 font-medium placeholder:text-slate-400 placeholder:font-light">
           <div @click="findIpAddress"
+            id="findIpAddress"
             class="bg-black h-full w-11 text-center rounded-r-md flex justify-center items-center absolute bottom-0 right-0">
             <i class="fa-sharp fa-solid fa-angle-right text-white text-xl"></i>
           </div>
@@ -69,22 +70,22 @@ onMounted(() => {
           class="bg-white w-8/12 h-3/6 flex flex-row flex-wrap justify-between px-5 py-6 rounded-md z-20 absolute -bottom-10">
           <div class="grow border-solid border-r-2 px-5">
             <span class="uppercase font-medium text-gray-400 text-xs tracking-wider">ip address</span>
-            <h3 class="text-xl font-medium text-gray-900 capitalize">{{ ipLocation.ip === '' ? 'No ip' : ipLocation.ip }}
+            <h3 class="text-xl font-medium text-gray-900 capitalize" id="ip">{{ ipLocation.ip === '' ? 'No ip' : ipLocation.ip }}
             </h3>
           </div>
           <div class="grow border-solid border-r-2 px-5">
             <span class="uppercase font-medium text-gray-400 text-xs tracking-wider">location</span>
-            <h3 class="text-xl font-medium text-gray-900 capitalize">{{ ipLocation.location === '' ? 'No location' :
+            <h3 class="text-xl font-medium text-gray-900 capitalize" id="location">{{ ipLocation.location === '' ? 'No location' :
               ipLocation.location }}</h3>
           </div>
           <div class="grow border-solid border-r-2 px-5">
             <span class="uppercase font-medium text-gray-400 text-xs tracking-wider">timezone</span>
-            <h3 class="text-xl font-medium text-gray-900 capitalize">{{ ipLocation.timezone === '' ? 'No timezone' :
+            <h3 class="text-xl font-medium text-gray-900 capitalize" id="timezone">{{ ipLocation.timezone === '' ? 'No timezone' :
               ipLocation.timezone }}</h3>
           </div>
           <div class="grow px-5">
             <span class="uppercase font-medium text-gray-400 text-xs tracking-wider">isp</span>
-            <h3 class="text-xl font-medium text-gray-900 capitalize">{{ ipLocation.isp === '' ? 'No ISP' :
+            <h3 class="text-xl font-medium text-gray-900 capitalize" id="isp">{{ ipLocation.isp === '' ? 'No ISP' :
               ipLocation.isp }}</h3>
           </div>
         </div>
